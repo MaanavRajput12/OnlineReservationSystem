@@ -31,6 +31,4 @@ erDiagram
         BIGINT train_id FK
     }
 
-This ER diagram represents the relational structure of the Online Reservation System, demonstrating user-based booking and train-reservation mapping using PostgreSQL.
-
 
