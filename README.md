@@ -2,32 +2,33 @@
 
 This project is an imitation of an online reservation sytem built using Java, Springboot, Maven and PostgreSQL.
 
+```mermaid
 erDiagram
     USER ||--o{ RESERVATION : makes
     TRAIN ||--o{ RESERVATION : has
 
     USER {
-        Long id PK
-        String username
-        String password
-        String role
+        BIGINT id PK
+        VARCHAR username
+        VARCHAR password
+        VARCHAR role
     }
 
     TRAIN {
-        Long id PK
-        String trainNumber
-        String source
-        String destination
-        Integer totalSeats
+        BIGINT id PK
+        VARCHAR train_number
+        VARCHAR source
+        VARCHAR destination
+        INT total_seats
     }
 
     RESERVATION {
-        Long id PK
-        LocalDate reservationDate
-        Integer seatNumber
-        String status
-        Long user_id FK
-        Long train_id FK
+        BIGINT id PK
+        DATE reservation_date
+        INT seat_number
+        VARCHAR status
+        BIGINT user_id FK
+        BIGINT train_id FK
     }
 
 This ER diagram represents the relational structure of the Online Reservation System, demonstrating user-based booking and train-reservation mapping using PostgreSQL.
